@@ -20,6 +20,10 @@ var corsOptions = {
   // app.options('*', cors())
   app.use(bodyParser.json());
 
+  app.get("/", (req,res)=>{
+    res.send("Hmm...")
+  })
+
 app.get("/logo.svg", (req, res) => {
     res.sendFile(path.join(__dirname, "logo.svg"));
   });
